@@ -1,0 +1,43 @@
+###
+POST http://localhost:3000/api/v1/worker/new-worker HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstname": "juan",
+    "lastname": "Andres",
+    "addres": [{
+        "zip_code": 17001,
+        "city": "Manizales",
+        "municipality": "Caldas",
+        "country": "Colombia"
+    }],
+    "pets": ["Pepe", "Joaquin"],
+    "work": [{
+        "id_work": "3",
+        "name_work": "carnicero",
+        "company": [{
+            "id_company": "1",
+            "name_company": "chec"
+        }]
+    }]
+}
+
+###
+GET http://localhost:3000/api/v1/worker/ HTTP/1.1
+
+###
+GET http://localhost:3000/api/v1/worker/651b1fd8666a319dd423bda6 HTTP/1.1
+
+###
+PATCH  http://localhost:3000/api/v1/worker/651b2bdeca70ed4e6f0c0f5f HTTP/1.1
+Content-Type: application/json
+
+{
+    "addres": [{
+        "city": "Riosucio"
+    }]
+}
+
+###
+DELETE  http://localhost:3000/api/v1/worker/651b210ac96036a6aba2bc9c HTTP/1.1
+
